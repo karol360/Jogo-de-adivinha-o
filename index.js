@@ -20,8 +20,8 @@ let numSorteado
 function gerarNum() {
     let res1 = document.getElementById('res1')
 
-    numSorteado = function aleatorioNum(a, b) {
-        return Math.floor(Math.random() * (b - a + 1)) + a
+    function aleatorioNum(a, b) {
+        numSorteado = Math.floor(Math.random() * (b - a + 1)) + a
     }
 
     let guardarNumSorteado = aleatorioNum(1, 100)
@@ -43,11 +43,17 @@ function chutar() {
     } else {
         let valorNum = parseInt(num.value)
 
-        // se o o valor digitado for igual ao numero sorteado, acabou o jogo
+        // se o o valor digitado for igual ao numero secreto, acabou o jogo
         if (valorNum === numSorteado) {
             res.innerHTML = `acabou o jogo, voce acertou`
         } else {
             res.innerHTML = `voce errou, tente novamente`
+        //se o valor digitado for maior ou menor que o numero secreto
+            if (valorNum > numSorteado) {
+                res.innerHTML = `O numero secreto é menor`
+            } else {
+                res.innerHTML = `o numero secreto é maior`
+            }
         }
     }
 
