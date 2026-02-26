@@ -1,5 +1,5 @@
 //numeros de tentativas
-let tentativas = 5
+let tentativas = 10
 //variavel global 
 let numSorteado
 
@@ -29,7 +29,7 @@ function chutar() {
     let button = document.getElementById('button')
 
     // COMEÇA O JOGO
-    if ((num.value).length == 0 || (num.value) > 100 || (num.value) < 0) {
+    if ((num.value).length == 0 || (num.value) > 100 || (num.value) < 0 || numSorteado == undefined) {
         window.alert('Valor invalido!! Tente novamente.')
     } else {
         let valorNum = parseInt(num.value)
@@ -45,7 +45,7 @@ function chutar() {
             tentativas--
             chances.innerHTML = `tentativas: ${tentativas}`
             if (tentativas === 0) {
-                res.innerHTML = `acabaram suas tentatiavas`
+                res.innerHTML = `acabaram suas tentatiavas, o numero secreto era ${numSorteado}`
                 button.disabled = true
                 return
             } else {
@@ -56,6 +56,8 @@ function chutar() {
                 } else {
                     res.innerHTML = `o numero secreto é maior`
                 }
+                num.value=''
+                num.focus()
             }
 
         }
