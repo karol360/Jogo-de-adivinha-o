@@ -1,23 +1,13 @@
-//fazer o bot gerar um numero de 1 a 100
-//fazer com que ele veja se o numero é maior ou menor até acertar 
-//escrever na tela se o numero é maior ou menor
-//se o numero for igual, o jogo acabou
-//5 tentativas 
-//=====================================================================
-
-
-
-
-//Jogo começa → tentativas = 5
-
+//numeros de tentativas
 let tentativas = 5
+//variavel global 
 let numSorteado
-///gerar um numero aleatorio
 
 
 
 // Função para gerar o numero
 function gerarNum() {
+    //Jogo começa → tentativas = 5
     let res1 = document.getElementById('res1')
 
     function aleatorioNum(a, b) {
@@ -29,13 +19,14 @@ function gerarNum() {
 }
 
 
-
 //Jogador clica
 function chutar() {
 
     // pegando os valores da caixa
     let num = document.getElementById('caixaNum')
     let res = document.getElementById('res')
+    let chances = document.getElementById('chances')
+    let button = document.getElementById('button')
 
     // COMEÇA O JOGO
     if ((num.value).length == 0 || (num.value) > 100 || (num.value) < 0) {
@@ -43,26 +34,31 @@ function chutar() {
     } else {
         let valorNum = parseInt(num.value)
 
+
         // se o o valor digitado for igual ao numero secreto, acabou o jogo
         if (valorNum === numSorteado) {
             res.innerHTML = `acabou o jogo, voce acertou`
         } else {
-            res.innerHTML = `voce errou, tente novamente`
-        //se o valor digitado for maior ou menor que o numero secreto
-            if (valorNum > numSorteado) {
-                res.innerHTML = `O numero secreto é menor`
+
+            //tentativas
+
+            tentativas--
+            chances.innerHTML = `tentativas: ${tentativas}`
+            if (tentativas === 0) {
+                res.innerHTML = `acabaram suas tentatiavas`
+                button.disabled = true
+                return
             } else {
-                res.innerHTML = `o numero secreto é maior`
+
+                //se o valor digitado for maior ou menor que o numero secreto
+                if (valorNum > numSorteado) {
+                    res.innerHTML = `O numero secreto é menor`
+                } else {
+                    res.innerHTML = `o numero secreto é maior`
+                }
             }
+
         }
     }
 
 }
-
-//O jogo olha: ainda tem tentativas?
-
-//Compara chute com número
-//Se acertou → fim
-//Se errou: diminui tentativas,informa quantas restam
-
-
