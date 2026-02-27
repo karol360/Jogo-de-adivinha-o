@@ -13,19 +13,19 @@
     <main>
         <header>
             <h1>Jogo de Adivinhação</h1>
-            <p>como o jogo funciona</p>
+            <p>Jogo de adivinhação onde o jogador tenta descobrir um número secreto entre 1 e 100. A cada erro, o sistema informa se o número correto é maior ou menor e reduz o total de tentativas. O jogo termina quando o jogador acerta ou quando as dez tentativas acabam.</p>
         </header>
 
         <section>
-            <div>
-                <p> <input type="button" value="Gerar Numero" onclick="gerarNum()"> </p> 
+            <div class="div1">
+                <p> <input type="button" value="Gerar Numero" onclick="gerarNum()" id="gerarN"> </p> 
                 <p id="res1"></p>
-                <input type="number" id="caixaNum" placeholder="Digite o numero">
-                <input type="button" value="Chutar" id="button" onclick="chutar()">
+                <input type="number" id="caixaNum" placeholder="Digite o numero" class="numero">
+                <input type="button" value="Chutar" id="button" onclick="chutar()" class="chutar">
             </div>
-            <div>
-                <p id="res">Resposta: </p>
-                <p id="chances"> tentativas: </p>
+            <div class="div2">
+                <p id="res"> 🎮 </p>
+                <p id="chances"> ❤️ = 5</p>
             </div>
         </section>
     </main>

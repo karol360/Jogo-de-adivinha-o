@@ -1,0 +1,114 @@
+@import url('https://fonts.googleapis.com/css2?family=Miniver&family=Mulish:ital,wght@0,200..1000;1,200..1000&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Miniver&family=Mulish:ital,wght@0,200..1000;1,200..1000&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Press+Start+2P&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+:root {
+    /* colors */
+    --laranja: #C2725B;
+    --cinza: #DFD9E2;
+    --preto: #252525;
+
+    /* fonts */
+    --font-family-p: poppins;
+    --font-family-g: 'Press Start 2P';
+    --color-branco: aliceblue;
+}
+
+* {
+    font-family: var(--font-family-p);
+}
+
+body {
+    background-color: var(--preto);
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+header {
+    width: 500px;
+    margin-top: 30px;
+    color: var(--color-branco);
+    text-align: center;
+}
+
+section {
+    background-color: var(--cinza);
+    border-radius: 10%;
+
+    margin-top: 40px;
+    width: 400px;
+    height: 400px;
+
+}
+
+#gerarN {
+    background-color: var(--laranja);
+    border: none;
+    color: aliceblue;
+
+    width: 300px;
+    height: 50px;
+
+    border-radius: 20px;
+    font-size: 20px;
+    font-family: var(--font-family-g);
+}
+
+#gerarN:hover {
+    color: #C2725B;
+    background-color: #DFD9E2;
+    border: 2px solid #C2725B;
+}
+
+
+/*  Loucura  */
+
+div {
+    margin-top: 40px;
+}
+
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+
+.numero{
+    border: 2px solid #C2725B;
+    border-radius: 20px;
+    height: 40px;
+    padding-left: 10px;
+    width: 115px;
+}
+
+input::placeholder{
+    color: #C2725B;
+    font-family: var(--font-family-g);
+    font-size: 8px;
+    letter-spacing: -1px;
+
+}
+
+.chutar{
+    font-family: var(--font-family-g);
+    color: var(--color-branco);
+    background-color: #C2725B;
+    border: none;
+    border-radius: 20px;
+    width: 90px;
+    height: 45px;
+    font-size: 10px;
+
+}
+
+.chutar:hover{
+    color: #C2725B;
+    background-color: #DFD9E2;
+    border: 2px solid #C2725B;
+}

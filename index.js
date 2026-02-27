@@ -15,7 +15,7 @@ function gerarNum() {
     }
 
     let guardarNumSorteado = aleatorioNum(1, 100)
-    res1.innerHTML = `${numSorteado}`
+    res1.innerHTML = `Numero gerado, boa sorte 🍀`
 }
 
 
@@ -37,24 +37,24 @@ function chutar() {
 
         // se o o valor digitado for igual ao numero secreto, acabou o jogo
         if (valorNum === numSorteado) {
-            res.innerHTML = `acabou o jogo, voce acertou`
+            res.innerHTML = `🥇 acabou o jogo, voce acertou 🥇`
         } else {
 
             //tentativas
 
             tentativas--
-            chances.innerHTML = `tentativas: ${tentativas}`
+            chances.innerHTML = ` ❤️ = ${tentativas}`
             if (tentativas === 0) {
-                res.innerHTML = `acabaram suas tentatiavas, o numero secreto era ${numSorteado}`
+                res.innerHTML = `acabaram suas tentatiavas ☠️, o numero secreto era ${numSorteado}`
                 button.disabled = true
                 return
             } else {
 
                 //se o valor digitado for maior ou menor que o numero secreto
                 if (valorNum > numSorteado) {
-                    res.innerHTML = `O numero secreto é menor`
+                    res.innerHTML = `Está quase, o numero secreto é <strong>MENOR</strong>👇`
                 } else {
-                    res.innerHTML = `o numero secreto é maior`
+                    res.innerHTML = `Quase, o numero secreto é <strong>MAIOR</strong> ☝️`
                 }
                 num.value=''
                 num.focus()
