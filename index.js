@@ -18,7 +18,6 @@ function gerarNum() {
     res1.innerHTML = `Numero gerado, boa sorte 🍀`
 }
 
-
 //Jogador clica
 function chutar() {
 
@@ -38,6 +37,7 @@ function chutar() {
         // se o o valor digitado for igual ao numero secreto, acabou o jogo
         if (valorNum === numSorteado) {
             res.innerHTML = `🥇 acabou o jogo, voce acertou 🥇`
+            button.disabled = true
         } else {
 
             //tentativas
@@ -64,3 +64,7 @@ function chutar() {
     }
 
 }
+
+document.addEventListener('DOMContentLoaded', function(){
+    gerarNum()
+})
