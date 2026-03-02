@@ -18,6 +18,7 @@ function gerarNum() {
     res1.innerHTML = `Numero gerado, boa sorte 🍀`
 }
 
+
 //Jogador clica
 function chutar() {
 
@@ -64,7 +65,3 @@ function chutar() {
     }
 
 }
-
-document.addEventListener('DOMContentLoaded', function(){
-    gerarNum()
-})
