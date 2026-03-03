@@ -65,7 +65,3 @@ function chutar() {
     }
 
 }
-
-document.addEventListener('DOMContentLoaded', function() {
-    gerarNum()
-})
